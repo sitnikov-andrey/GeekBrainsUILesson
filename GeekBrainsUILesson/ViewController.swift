@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         let password = passwodrInput?.text!
         
         if login == "admin" && password == "admin" {
-            print("OK")
+            print("Добро пожаловать!")
         } else {
-            print("Not OK")
+            print("Логин или пароль не верный!")
         }
     }
     
