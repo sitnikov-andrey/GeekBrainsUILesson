@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  geekbrainspart2
-//
-//  Created by Андрей Ситников on 13.01.2021.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -20,15 +13,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwodrInput: UITextField?
     
     @IBAction func singInButton(_ sender: Any) {
-        let login = loginInput?.text!
+ 
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        let password = passwodrInput?.text!
-        
-        if login == "admin" && password == "admin" {
-            print("Добро пожаловать!")
-        } else {
-            print("Логин или пароль не верный!")
+        func showAlert()  {
+            let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
+                        alert.addAction(action)
+                        present(alert, animated: true)
         }
+        
+        func checkUserData(_ login : String, _ password : String) -> Bool {
+            if login == "admin" && password == "admin" {
+                return true
+            } else {
+                showAlert()
+                return false
+            }
+        }
+        
+        guard let login = loginInput?.text else {
+            showAlert()
+            return false
+        }
+        
+        guard let password = passwodrInput?.text else {
+            showAlert()
+            return false
+        }
+        
+        return checkUserData(login, password)
+        
     }
     
     override func viewDidLoad() {
