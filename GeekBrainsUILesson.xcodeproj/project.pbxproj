@@ -15,8 +15,12 @@
 		66EE385725BF28AC00218188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE383B25BF248600218188 /* Assets.xcassets */; };
 		66EE385C25BF28F700218188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EE385925BF28D200218188 /* LaunchScreen.storyboard */; };
 		66EE385D25BF28F700218188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EE385A25BF28D300218188 /* Main.storyboard */; };
-		66EE386125BF293300218188 /* GroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE386025BF293300218188 /* GroupViewCell.swift */; };
-		66EE386225BF293300218188 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE385F25BF293200218188 /* GroupsViewController.swift */; };
+		66EE386125BF293300218188 /* MyGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE386025BF293300218188 /* MyGroupViewCell.swift */; };
+		66EE386225BF293300218188 /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE385F25BF293200218188 /* MyGroupsViewController.swift */; };
+		66EE386825C1D0F800218188 /* NewGroupeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE386725C1D0F800218188 /* NewGroupeViewController.swift */; };
+		66EE386B25C1D11500218188 /* NewGroupeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE386A25C1D11500218188 /* NewGroupeViewCell.swift */; };
+		66EE387025C1FD8800218188 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE386F25C1FD8800218188 /* User.swift */; };
+		66EE387325C1FE2F00218188 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE387225C1FE2F00218188 /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +35,12 @@
 		66EE385225BF27D800218188 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66EE385925BF28D200218188 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66EE385A25BF28D300218188 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		66EE385F25BF293200218188 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
-		66EE386025BF293300218188 /* GroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewCell.swift; sourceTree = "<group>"; };
+		66EE385F25BF293200218188 /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
+		66EE386025BF293300218188 /* MyGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewCell.swift; sourceTree = "<group>"; };
+		66EE386725C1D0F800218188 /* NewGroupeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupeViewController.swift; sourceTree = "<group>"; };
+		66EE386A25C1D11500218188 /* NewGroupeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupeViewCell.swift; sourceTree = "<group>"; };
+		66EE386F25C1FD8800218188 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		66EE387225C1FE2F00218188 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 		66AE468725B355D500C6BDBE /* GeekBrainsUILesson */ = {
 			isa = PBXGroup;
 			children = (
+				66EE386E25C1FD6300218188 /* Model */,
 				66EE386425BF295E00218188 /* Groups */,
 				66EE384E25BF258D00218188 /* Friends */,
 				66EE383825BF248600218188 /* AppDelegate.swift */,
@@ -91,10 +100,21 @@
 		66EE386425BF295E00218188 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				66EE385F25BF293200218188 /* GroupsViewController.swift */,
-				66EE386025BF293300218188 /* GroupViewCell.swift */,
+				66EE385F25BF293200218188 /* MyGroupsViewController.swift */,
+				66EE386025BF293300218188 /* MyGroupViewCell.swift */,
+				66EE386725C1D0F800218188 /* NewGroupeViewController.swift */,
+				66EE386A25C1D11500218188 /* NewGroupeViewCell.swift */,
 			);
 			path = Groups;
+			sourceTree = "<group>";
+		};
+		66EE386E25C1FD6300218188 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66EE386F25C1FD8800218188 /* User.swift */,
+				66EE387225C1FE2F00218188 /* Group.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,12 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EE386225BF293300218188 /* GroupsViewController.swift in Sources */,
+				66EE387325C1FE2F00218188 /* Group.swift in Sources */,
+				66EE386225BF293300218188 /* MyGroupsViewController.swift in Sources */,
 				66EE384825BF256600218188 /* FriendsViewController.swift in Sources */,
+				66EE386B25C1D11500218188 /* NewGroupeViewCell.swift in Sources */,
 				66EE384225BF248700218188 /* ViewController.swift in Sources */,
-				66EE386125BF293300218188 /* GroupViewCell.swift in Sources */,
+				66EE386825C1D0F800218188 /* NewGroupeViewController.swift in Sources */,
+				66EE386125BF293300218188 /* MyGroupViewCell.swift in Sources */,
 				66EE384B25BF258000218188 /* FriendViewCell.swift in Sources */,
 				66EE384125BF248700218188 /* AppDelegate.swift in Sources */,
+				66EE387025C1FD8800218188 /* User.swift in Sources */,
 				66EE384025BF248700218188 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

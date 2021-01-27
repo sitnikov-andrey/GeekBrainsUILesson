@@ -1,15 +1,9 @@
-//
-//  GroupViewCell.swift
-//  GeekFirst
-//
-//  Created by Андрей Ситников on 24.01.2021.
-//
-
 import UIKit
 
-class GroupViewCell: UITableViewCell {
+class MyGroupViewCell: UITableViewCell {
 
-    @IBOutlet weak var groupNameLabel: UILabel?
+    @IBOutlet weak var myGroupImageView: UIImageView?
+    @IBOutlet weak var myGroupNameLabel: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
