@@ -20,7 +20,7 @@ class FriendsViewController: UITableViewController {
         selecterName?.addTarget(self,
                                 action: #selector(handleIndexTaitleChange),
                                 for: .valueChanged)
-        //Получаем буквы с которых начинаются имена без дубликатов
+        //Получаем буквы с которых начинаются имена, без дубликатов
         litters = Array(Set(friends.map({ String ($0.prefix(1)) })))
     }
     
