@@ -10,14 +10,16 @@ import UIKit
 class NewGroupsViewController: UITableViewController {
     
     var newGroups = ["Группа новостей", "Группа популярной науки"]
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return newGroups.count
     }
     
@@ -27,5 +29,11 @@ class NewGroupsViewController: UITableViewController {
         newGroupCell.newGroupNameLabel?.text = newGroups[indexPath.row]
         return newGroupCell
     }
-
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print(newGroups)
+//        newGroups.remove(at: indexPath.row)
+//        //tableView.deleteRows(at: [indexPath], with: .automatic)
+//        tableView.reloadData()
+//    }
 }
