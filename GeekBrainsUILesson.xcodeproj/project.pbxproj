@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66763C6225D02887005291F9 /* FriendNameSelectorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66763C6125D02887005291F9 /* FriendNameSelectorControl.swift */; };
+		66763C6525D02A46005291F9 /* FriendName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66763C6425D02A46005291F9 /* FriendName.swift */; };
 		66EE384025BF248700218188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE383725BF248600218188 /* SceneDelegate.swift */; };
 		66EE384125BF248700218188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE383825BF248600218188 /* AppDelegate.swift */; };
 		66EE384225BF248700218188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE383925BF248600218188 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66763C6125D02887005291F9 /* FriendNameSelectorControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendNameSelectorControl.swift; sourceTree = "<group>"; };
+		66763C6425D02A46005291F9 /* FriendName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendName.swift; sourceTree = "<group>"; };
 		66AE468525B355D500C6BDBE /* GeekBrainsUILesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekBrainsUILesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EE383325BF248400218188 /* GeekBrainsUILesson-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeekBrainsUILesson-Bridging-Header.h"; sourceTree = "<group>"; };
 		66EE383725BF248600218188 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66763C4B25CEFF74005291F9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		66AE467C25B355D500C6BDBE = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +84,7 @@
 		66AE468725B355D500C6BDBE /* GeekBrainsUILesson */ = {
 			isa = PBXGroup;
 			children = (
+				66763C4B25CEFF74005291F9 /* resources */,
 				66EE386E25C1FD6300218188 /* Model */,
 				66EE386425BF295E00218188 /* Groups */,
 				66EE384E25BF258D00218188 /* Friends */,
@@ -93,6 +105,7 @@
 			children = (
 				66EE384A25BF258000218188 /* FriendViewCell.swift */,
 				66EE384725BF256600218188 /* FriendsViewController.swift */,
+				66763C6125D02887005291F9 /* FriendNameSelectorControl.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 			children = (
 				66EE386F25C1FD8800218188 /* User.swift */,
 				66EE387225C1FE2F00218188 /* Group.swift */,
+				66763C6425D02A46005291F9 /* FriendName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,11 +207,13 @@
 				66EE384825BF256600218188 /* FriendsViewController.swift in Sources */,
 				66EE386B25C1D11500218188 /* NewGroupeViewCell.swift in Sources */,
 				66EE384225BF248700218188 /* ViewController.swift in Sources */,
+				66763C6225D02887005291F9 /* FriendNameSelectorControl.swift in Sources */,
 				66EE386825C1D0F800218188 /* NewGroupeViewController.swift in Sources */,
 				66EE386125BF293300218188 /* MyGroupViewCell.swift in Sources */,
 				66EE384B25BF258000218188 /* FriendViewCell.swift in Sources */,
 				66EE384125BF248700218188 /* AppDelegate.swift in Sources */,
 				66EE387025C1FD8800218188 /* User.swift in Sources */,
+				66763C6525D02A46005291F9 /* FriendName.swift in Sources */,
 				66EE384025BF248700218188 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

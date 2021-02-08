@@ -10,14 +10,17 @@ import UIKit
 class MyGroupsViewController: UITableViewController {
     
     var myGroups = ["Группа любителей кошек", "Группа со смешными картинками"]
-
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return myGroups.count
     }
     
@@ -34,4 +37,14 @@ class MyGroupsViewController: UITableViewController {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
         }
+    
+    @IBAction func didSelectGroup(segue: UIStoryboardSegue) {
+        guard let newGroupController = segue.source as? NewGroupsViewController else { return }
+        guard let selected = newGroupController.tableView.indexPathForSelectedRow else { return }
+        let group = newGroupController.newGroups[selected.row]
+        if !myGroups.contains(group) {
+            myGroups.append(group)
+            tableView.reloadData()
+        }
+    }
 }
